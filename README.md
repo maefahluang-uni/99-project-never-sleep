@@ -1,14 +1,7 @@
 # Project -title
 Project-99
 ## Members
-6431503006 KRAIWIT SUDNAEN
-
 6431503008 JIRAYU BOONKHUN
-
-6431503044 PATTARAPON BUNCHUAI
-
-6431503045 PATTRAPORN SONSANG
-
 ## Explain 
 1. **User Cards:**
    - The webpage displays information cards for multiple users.
