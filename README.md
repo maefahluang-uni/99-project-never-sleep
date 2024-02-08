@@ -13,6 +13,30 @@ The project comprises 3 layouts:
 
 The project utilizes Nuxt.js technology for managing login and displaying web pages efficiently.
 
+## Project Setup
+```bash
+# go to project directory
+$ cd web
+
+# install dependencies
+$ yarn install # or yarn
+```
+
+## Project Deployment
+```bash
+# go to project directory
+$ cd web
+
+# install dependencies
+$ yarn install # or yarn
+
+# build docker image
+$ docker build -t project-name .
+
+# run deployment
+$ docker run -p 3000:3000 project-name
+```
+
 ## Members
 - 6431503006 KRAIWIT SUDNAEN
 - 6431503008 JIRAYU BOONKHUN
