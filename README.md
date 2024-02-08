@@ -1,11 +1,22 @@
-# Project -title
-explain your project here
-## Members
-list out your member ID and name.
+# Feature Authentication
 
-## Instruction
-You need to create skeleton of your project's development. It does not necessary include the complete source code. Please follow instructions below:
-- Edit readme file that briefly explains your project and details of members.​ 
-- Create folder structure and some source code to prepare for development
-- Decide what features to roll out and who is responsible for it.​ Create branches for each feature. Explain each feature in Readme file in their own branch​ 
-- Create Docker file for your deployment of your application 
+This feature is about to handle authentication of the application which uses of unauthenticated login (just add authentication guard but whatever username or password can still login)
+
+## Use cases
+
+Which pages that need authenticated access just add authentication middleware following
+
+```html
+<template>
+  ...component content
+</template>
+
+<script>
+export default {
+  // Add this
+  middleware: 'auth',
+
+  // ...other component options
+}
+</script>
+```
