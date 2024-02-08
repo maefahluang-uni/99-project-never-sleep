@@ -1,17 +1,13 @@
-# Project -title
-Project-99
+# Project-99
+1.row : Creates a row of elements and specifies the layout and grouping of elements with `justify="center"` to horizontally center-align them and `align="center"` to vertically center-align them.
+2.col: Creates columns and sets the size to 12 columns for xs (extra small) size, 8 columns for sm (small) size, and 6 columns for md (medium) size.
+3.card: Creates a card to display certain information or content, and uses the class `py-4` to set padding of 4 units on top and bottom, and utilizes the class `d-flex justify-center` to horizontally center-align the content of the card.
+4.avatar : Creates an avatar to display a user's image, setting the size and layout of the image to tile.
+5.image: Creates an image and sets the aspect ratio to 1:1, along with specifying the URL of the image.
+6.title: Write the title position center
+
 ## Members
-6431503006 Kraiwit Sudnaen
-## Explain
-1.navigation-drawer : A side menu component containing items generated from data in the `items` array. It also provides options to access login/logout pages for users.
-  
-2.app bar : The top bar of the application, comprising the application's name (`title`) and a menu specific to the application.
-  
-3.main: The main content area that changes according to the content specified in the Nuxt.js routes.
-  
-4.botto navigation: A bottom navigation menu displaying Home and Profile options for the application.
-  
-5.footer : The footer of the application displaying copyright information.
+- 6431503045 PATTARAPORN SONSANG
 
 6431503008 Jirayu Boonkhun
 
