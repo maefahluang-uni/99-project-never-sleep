@@ -9,7 +9,7 @@
 <script>
 export default {
   middleware: 'auth',
-  
+
   computed: {
     backgroundColor() {
       if (this.$vuetify.theme.isDark) {

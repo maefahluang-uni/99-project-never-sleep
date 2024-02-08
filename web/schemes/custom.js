@@ -5,8 +5,12 @@ const SECRET = 'secret'
 
 export default class CustomScheme extends LocalScheme {
   async login(endpoint = {}) {
-    const token = crypto.AES.encrypt(endpoint.username, SECRET).toString()
+    const payload = {
+      username: endpoint.data.username,
+    }
+    const token = crypto.AES.encrypt(JSON.stringify(payload), SECRET).toString()
     await this.setUserToken(token)
+    this.$auth.redirect('home')
   }
 
   setUserToken(token) {
@@ -22,14 +26,19 @@ export default class CustomScheme extends LocalScheme {
       }
       const payload = token.split('Bearer ')[1]
       const user = crypto.AES.decrypt(payload, SECRET).toString(crypto.enc.Utf8)
-      this.$auth.setUser({ username: user })
+      if (!user) {
+        throw new Error('User not found')
+      }
+      this.$auth.setUser(JSON.parse(user))
     } catch (error) {
       this.$auth.callOnError(error, { method: 'fetchUser' })
       throw error
     }
   }
 
-  logout() {
-    return this.$auth.reset()
+  async logout() {
+    const result = await this.$auth.reset()
+    this.$auth.redirect('login')
+    return result
   }
 }

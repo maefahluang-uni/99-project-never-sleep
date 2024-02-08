@@ -79,7 +79,6 @@ export default {
       }
       try {
         await this.$auth.loginWith('custom', { data: this.user })
-        
       } catch (error) {
         this.error = error.response?.data?.message || 'An error occurred'
       }

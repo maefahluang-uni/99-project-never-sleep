@@ -13,8 +13,8 @@
       <v-list>
         <v-list-item>
           <v-list-item-avatar size="80" color="primary">
-    <v-icon size="40" dark>{{ user.icon }}</v-icon>
-  </v-list-item-avatar>
+            <v-icon size="40" dark>{{ user.icon }}</v-icon>
+          </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title class="ma-2 text--text font-weight-bold">
               {{ user.name }}
@@ -32,8 +32,13 @@
       </h3>
     </v-card>
     <br />
-    <v-card flat class="overflow-hidden mx-auto mt-3" rounded="xl" max-width="28rem">
-      <v-btn color="error" large block rounded>
+    <v-card
+      flat
+      class="overflow-hidden mx-auto mt-3"
+      rounded="xl"
+      max-width="28rem"
+    >
+      <v-btn color="error" large block rounded @click="logout()">
         <v-icon left> mdi-logout </v-icon>
         Logout
       </v-btn>
@@ -47,32 +52,39 @@ export default {
     return {
       users: [
         {
-          icon:'mdi-account-injury',
+          icon: 'mdi-account-injury',
           name: 'KRAIWIT SUDNAEN',
           studentID: '6431503006',
           email: '6431503006@lamduan.mfu.ac.th',
         },
-       {
-         icon:'mdi-account-school',
+        {
+          icon: 'mdi-account-school',
           name: 'JIRAYU BOONKHUN',
           studentID: '6431503008',
           email: '6431503008@lamduan.mfu.ac.th',
         },
         {
-          icon:'mdi-account-tie-hat',
+          icon: 'mdi-account-tie-hat',
           name: 'PATTARAPON BUNCHUAI',
           studentID: '6431503044',
           email: '6431503044@lamduan.mfu.ac.th',
         },
         {
-          icon:'mdi-account',
+          icon: 'mdi-account',
           name: 'PATTRAPORN SONSANG',
           studentID: '6431503045',
           email: '6431503045@lamduan.mfu.ac.th',
         },
       ],
-    };
-    
+    }
   },
-};
+
+  methods: {
+    logout() {
+      this.$nextTick(async () => {
+        await this.$auth.logout()
+      })
+    },
+  },
+}
 </script>
