@@ -12,6 +12,7 @@ The project comprises 3 layouts:
 3. Error Layout: This page is used to display errors or notifications when problems occur during operation.
 
 The project utilizes Nuxt.js technology for managing login and displaying web pages efficiently.
+
 Link web: https://nuxt-app-qx27abspeq-uc.a.run.app/
 
 
